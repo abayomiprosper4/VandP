@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes dashboard-enter {
+  from {
+    opacity: 0;
+    transform: translateY(14px) skewY(1deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) skewY(0);
+  }
+}
+
+@keyframes dashboard-orbit {
+  from {
+    transform: rotate(-18deg) scale(0.9);
+  }
+  to {
+    transform: rotate(12deg) scale(1.05);
+  }
+}
+
+.dashboard-enter {
+  animation: dashboard-enter 0.65s cubic-bezier(0.22, 0.8, 0.25, 1) both;
+}
+
+.dashboard-orbit {
+  animation: dashboard-orbit 7s ease-in-out infinite alternate;
+}
+
+.dashboard-nav-item,
+.dashboard-icon-button,
+.dashboard-management {
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.dashboard-nav-item:hover,
+.dashboard-icon-button:hover {
+  transform: translateX(3px) scale(1.02);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dashboard-enter,
+  .dashboard-orbit {
+    animation: none;
+  }
+  .dashboard-nav-item,
+  .dashboard-icon-button,
+  .dashboard-management {
+    transition: none;
+  }
+}

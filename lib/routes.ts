@@ -1,0 +1,20 @@
+export const routes = {
+  splash: '/splash',
+  logIn: '/auth/log-in',
+  signUp: {
+    category: '/auth/sign-up/category',
+    createAccount: '/auth/sign-up/create-account',
+    email: '/auth/sign-up/email',
+    profile: '/auth/sign-up/profile',
+    business: '/auth/sign-up/business',
+    operations: '/auth/sign-up/operations',
+    payout: '/auth/sign-up/payout',
+    success: '/auth/sign-up/success',
+  },
+  overview: '/overview',
+  staff: '/staff',
+  staffAssignments: '/staff/assignments',
+  staffWorkload: '/staff/workload',
+  services: '/services',
+  newService: '/services/new',
+} as const;
