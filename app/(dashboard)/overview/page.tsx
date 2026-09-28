@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import {
   BarChart3,
   Bell,
@@ -150,10 +151,12 @@ export default function OverviewPage() {
           </div>
           <div className="flex items-center gap-3">
             <button
+              type="button"
               className="dashboard-icon-button rounded-full p-2 text-white/65 hover:bg-white/10"
               aria-label="Notifications"
+              onClick={() => (window.location.href = "/notifications")}
             >
-          <Bell size={17} />
+              <Bell size={17} />
             </button>
             <button
               className="dashboard-icon-button rounded-full p-2 text-white/65 hover:bg-white/10 lg:hidden"
@@ -234,12 +237,13 @@ export default function OverviewPage() {
               <h2 className="text-[.7rem] font-medium sm:text-lg">
                 Manage Your Salon
               </h2>
-              <button
+              <Link
+                href="/services"
                 className="text-white/40 hover:text-white"
                 aria-label="More salon options"
               >
                 <MoreHorizontal size={17} />
-              </button>
+              </Link>
             </div>
             <div className="grid gap-2.5 sm:grid-cols-3 lg:grid-cols-1">
               {managementLinks.map(({ title, detail, icon: Icon }) => (

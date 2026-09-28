@@ -12,6 +12,7 @@ export const routes = {
     success: '/auth/sign-up/success',
   },
   overview: '/overview',
+  notifications: '/notifications',
   staff: '/staff',
   staffAssignments: '/staff/assignments',
   staffWorkload: '/staff/workload',
